@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - EduAlert</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f0fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            width: 380px;
+            text-align: center;
+        }
+        input, textarea {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        button {
+            background-color: #b030b0;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #8b238c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Delete My EduAlert Account</h2>
+        <p>Please fill the form below to request account deletion.</p>
+
+        <form id="deleteForm" onsubmit="return handleDelete(event)">
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="email" id="email" placeholder="Registered email" required>
+            <input type="text" id="reg" placeholder="Register Number / Staff ID" required>
+            <textarea id="reason" placeholder="Reason (Optional)"></textarea>
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+
+    <script>
+        function handleDelete(event) {
+            event.preventDefault();
+            document.body.innerHTML =
+              "<h1 style='text-align:center; margin-top:20%; font-family:Arial;'>Your account deletion request was submitted. We will process it within 48 hours.</h1>";
+        }
+    </script>
+
+</body>
+</html>
